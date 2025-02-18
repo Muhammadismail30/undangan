@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <section class="pic">
+            <img src="img/logo hcc.png" alt="Logo Habibie Coding Club">
+        </section>
+
+        <h1 class="highlight">Bazar Calling!!</h1>
+        <p class="hcc">Habibie Coding Club</p>
+        <p class="to">To:</p>
+        <p class="guest-name" id="guestName">undangan tamu</p>
+
+        <div class="info">
+            <div class="item">
+                <i class="uil uil-calendar-alt"></i>
+                <p>Senin, 18 February 2025</p>
+            </div>
+            <div class="item">
+                <i class="uil uil-clock"></i>
+                <p>08.00 - 12.00 WIB</p>
+            </div>
+            <div class="item">
+                <i class="uil uil-location-pin-alt"></i>
+                <p>Cafe King Street, Jl.Bumi Harapan</p>
+            </div>
+        </div>
+
+        <p class="slmt">Datang dan ramaikan...</p>
+    </div>
+
+    <script>
+        // Fungsi untuk mengambil parameter dari URL
+        function getParameterFromUrl(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Ambil nama dari URL
+        const nama = getParameterFromUrl('nama') || window.location.pathname.split('/').pop();
+
+        // Ubah teks "undangan tamu" sesuai dengan nama yang diambil
+        if (nama) {
+            document.getElementById('guestName').textContent = nama;
+        }
+    </script>
+</body>
+</html>
